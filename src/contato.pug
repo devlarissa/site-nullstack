@@ -1,0 +1,33 @@
+extends template
+
+mixin logos(img, text, link)
+    .contactContainer
+        a(href=`${link}`)
+            img(src=`assets/contato/${img}.webp`).contactImage
+            h3(id="socialMediaText" style=`color: rgba(34, 34, 34, 0.863)`)= text
+
+block main
+    .total
+        .centeredCard
+            form.contactCard.mail
+                h2.contactFields Contato
+                .contactFields
+                    label Nome:
+                    input(type='text' name='name' placeholder='Ex: Darth Vader').inputField
+                .contactFields
+                    label Email:
+                    input(type='email' name='email' placeholder='Ex: iamyourfather@mail.com').inputField
+                .contactFields
+                    label Mensagem:
+                    textarea(name="comments" rows="10" placeholder="Digite aqui...").comentField
+                div
+                    button(type="submit" value="contato.pug").buttonField Enviar
+
+    footer#contactFooter
+        h2.titulo Redes sociais
+        .icons
+            +logos('linkedin','Linkedin','https://www.linkedin.com/company/null-stack')
+            +logos('facebook','Facebook','https://www.facebook.com/NullStacksocial/')
+            +logos('instagram','Instagram','https://www.instagram.com/null.stack')
+            +logos('github','GitHub','https://github.com/Null-Stack')
+            +logos('email','Email', 'mailto:contato@nullstack.com.br?subject=Contato')

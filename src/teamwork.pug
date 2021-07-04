@@ -1,0 +1,30 @@
+extends template
+
+mixin perfil(img, name, desc, link)
+    .teamWorkCard
+        a(href=`${link}`)
+            center
+                img.iconImageSU(src=`assets/${img}.webp`)
+                h2.iconsText= name
+                p.iconsDesc= desc
+
+
+block main
+
+    center.espacamentoSuperior
+        .apresentacao
+            p.titulo TeamWork da Null Stack
+            p.subtitulo Na Null Stack nosso team work não se limita apenas com divisões de tarefas em um projeto. Nós visamos a troca de experiências e buscamos um aprendizado constante. Entendemos que trabalhar em equipe é algo extremamente importante para o desenvolvimento pessoal além do profissional. Aqui não há competição hierárquica, todos temos voz e a opinião de cada um faz a diferença.
+            .icons
+                div.teamworkDivider
+                    +perfil('junkmai','Mascotes','Junk e Mai fazem parte desse time, deixando o dia da Null Stack mais divertido!')
+                    +perfil('Athena','Athena Sarantôpoulos','Full Stack.', 'https://codetrace.com/users/athenasaran')
+                div.teamworkDivider
+                    +perfil('barbaras','Bárbara de Oliveira','Full Stack.')
+                    +perfil('larissa_2','Larissa Ramos','Gerente de projetos/Full Stack.', 'https://codetrace.com/users/lsramoscdc/')
+                div.teamworkDivider
+                    +perfil('natalia','Natalia Neves','Designer/Marketing.', 'https://www.linkedin.com/in/natalia-neves-718a33186/')
+                    +perfil('thiago','Thiago Soares','Gerente administrativo.', 'https://www.linkedin.com/in/thiago-soares-643690187/')
+                div.teamworkDivider
+                    +perfil('rangel','Vinicius Rangel','Technical Lead/Full Stack.', 'https://codetrace.com/users/viniciuslrangel')
+                    +perfil('yuri','Yuri Faria','Full Stack/Designer.', 'https://codetrace.com/users/YuriGuima')

@@ -1,0 +1,57 @@
+extends template
+
+
+mixin icon(img, text, desc)
+    .container
+        center
+            img.iconImage(src=`assets/icons/${img}Hover.webp` height="170")
+            h2.iconsText= text
+            p.iconsDesc= desc
+
+mixin navIcon(img)
+    .languageIcons
+        img(src=`assets/linguagens/${img}.webp` height="40px")
+
+mixin portfolioCard(title, text)
+    td.portfolioTd
+        h2= title
+        p= text
+
+block main
+
+    .espacamentoSuperior
+        h2(style={color: 'white'}).titulo Projetos realizados 
+
+    table#portfolioTable
+        tr
+            +portfolioCard('Projeto MD3E','Site criado para interação dos usuários que utilizam o método de desenvolvimento aberto com desdobramentos.')
+            +portfolioCard('Projeto Feito Cubo','Desevolvimento de software para linux.')
+        tr
+            +portfolioCard('WoSafe','A proposta de aplicativo da Null Stack promove a comunicação entre as mulheres sobre ambientes e regiões que podem ser consideradas perigosas ou que requerem certa atenção. Utilizando um mapa, foi desenhado um esquema de rede social onde usuárias podem publicar suas experiências de forma a alertar outras usuárias sobre possíveis discriminações ou possibilidade de violência.')
+            +portfolioCard('Aprender Bem','Consiste na implementação de uma plataforma web que ajuda o professor a visualizar com clareza em qual parte da matéria os alunos da sala estão com maiores dificuldades e auxilia o mesmo com instruções de como aplicar diversas metodologias ativas já existentes para melhor o aprendizado, desempenho e envolvimento dos alunos na matéria.')
+        tr
+            +portfolioCard('Projeto Construção','Aplicação na plataforma web e mobile para envio de orçamentos de materiais de construção')
+            +portfolioCard('LogoGo','Aplicação mobile para inserir logo e logomarca em imagens/fotos de forma mais prática')
+        tr
+            +portfolioCard('VacinAção','A NullStack esteve presente a Campus Party Brasília 2019, participamos da hackathon e desenvolvemos uma demo do jogo VacinAção para ajudar na conscientização da vacina. http://bit.ly/nullstack--jogo-vacinAcao')
+            +portfolioCard('Projeto Busca Rápida','Aplicativo com buscas rápidas de bares e restaurantes no google maps. Com rating e comentários dos usuários. ')
+
+
+    footer#portfolioFooter    
+        #navLanguage
+            +navIcon('c-logo')
+            +navIcon('dart')
+            +navIcon('flutter')
+            +navIcon('java')
+            +navIcon('php')
+            +navIcon('python')
+            +navIcon('react')
+            +navIcon('sql')
+            +navIcon('trindade')
+
+        .icons
+            +icon('mobile', 'Mobile', 'Criação de aplicativos Android e iOs cumprindo toda sua necessidade e com um design inovador. Em um mercado cada vez mais competitivo e em constante expansão, empresas que querem crescer e ser referência na área em que atuam precisam ter a transformação digital como aliada.')               
+            +icon('web', 'Web', 'Aplicações web usam um navegador web como Mozilla Firefox, Google Chrome, dentre outros, como interface, criação de sites e aplicações web (ex.: web service) com design único e funcionalidades sob medida.')               
+            +icon('desktop', 'Desktop', 'Uma aplicação desktop é qualquer software que pode ser instalado em um computador e usado para executar tarefas específicas. Uma aplicação sob medida para você e/ou sua empresa rodando direto no sistema operacional da máquina.')
+            +icon('hardware', 'Hardware', 'Software e Hardware lado a lado sendo desenvolvido para seu projeto. Desenvolvemos soluções completas que envolvam software e hardware. Se não for impossível, nós vamos desenvolvê-lo para você.')
+

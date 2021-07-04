@@ -1,0 +1,32 @@
+extends template
+
+mixin icon(img, text, desc) 
+    .container
+        img.iconImage(src=`assets/icons/${img}Hover.webp` height="170")
+        h3.iconsText= text
+        p.iconsDesc= desc
+
+append head
+    link(rel="stylesheet", href="/home.scss")
+
+block background
+    .total
+        .fundo.cover
+            .home.cover.center(data-scroll="this.style.backgroundPositionX = `${50 + Math.max(0, 50 - Math.min($value, 200) / 4)}%`")
+        .slogan
+            .card
+                .text-slogan
+                    .bg
+                        span We code.
+                    p Imagine. Nós desenvolvemos.
+
+
+block main
+    footer.footerStyle
+        p.titulo O que podemos oferecer para você ou sua empresa?
+        p.subtitulo Soluções tecnológicas, desenvolvimento de softwares.
+        .icons
+            +icon('mobile', 'Mobile', 'Criação de aplicativos Android e iOs cumprindo toda sua necessidade e com um design inovador. Em um mercado cada vez mais competitivo e em constante expansão, empresas que querem crescer e ser referência na área em que atuam precisam ter a transformação digital como aliada.')
+            +icon('web', 'Web', 'Aplicações web usam um navegador web como Mozilla Firefox, Google Chrome, dentre outros, como interface. Criação de sites e aplicações web (ex.: web service) com design único e funcionalidades sob medida.')
+            +icon('desktop', 'Desktop', 'Uma aplicação desktop é qualquer software que pode ser instalado em um computador e usado para executar tarefas específicas. Uma aplicação sob medida para você e/ou sua empresa rodando direto no sistema operacional da máquina.')
+            +icon('hardware', 'Hardware', 'Software e Hardware lado a lado sendo desenvolvido para seu projeto. Desenvolvemos soluções completas que envolvam software e hardware. Se não for impossível, nós vamos desenvolvê-lo para você.')

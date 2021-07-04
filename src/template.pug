@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        block head
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            meta(charset="UTF-8")
+            title Null Stack
+            link(rel="stylesheet", href="/style.scss")
+            link(href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet")
+            link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+            script(src="./index.js")
+    body
+        
+        .head
+            .nav-left
+                a( href="home.pug")
+                    img(src="assets/logo480.webp" height="40")              
+
+            .nav-right
+                a( href="home.pug") HOME
+                a( href="contato.pug") CONTATO
+                a( href="portfolio.pug") PORTFÓLIO
+                a( href="orcamento.pug") ORÇAMENTO
+                a( href="teamwork.pug") TEAMWORK
+
+            div.dropdown
+                i.fa.fa-bars(onclick="document.getElementById('myDropdown').classList.toggle('show');").dropbtn.menu
+                div#myDropdown.dropdown-content
+                    a( href="home.pug") HOME
+                    a( href="contato.pug") CONTATO
+                    a( href="portfolio.pug") PORTFÓLIO
+                    a( href="orcamento.pug") ORÇAMENTO
+                    a( href="teamwork.pug") TEAMWORK
+
+        block background
+            .fundo.cover
+                .home.cover
+        block main
+        footer.footerDetails
+            center
+                .logo-rodape
+                    img(src="assets/cort.webp" height="60")
+
+                .details
+                    p Rua Basileia – nº 49 Bairro Santa Cruz   -  CEP:32280-070   -   Contagem   -   Minas Gerais, Brasil  -   Telefone (37) 99100-3686  -  Email: contato@nullstack.com.br
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "site-ns-processor",
+  "version": "2.0.0",
+  "main": "",
+  "scripts": {
+    "start": "node preprocessor.js"
+  },
+  "repository": "git@gitlab.com:null-stack/apps-internos/site-ns-2.0.git",
+  "author": "Vinicius Rangel <rangel@nullstack.com.br>",
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "parcel-bundler": "^1.12.3",
+    "pug": "^2.0.4",
+    "pug-beautify": "^0.1.1",
+    "sass": "^1.23.0-module.beta.1",
+    "scssfmt": "^1.0.7",
+    "sharp": "^0.23.0",
+    "simple-git": "^1.126.0"
+  }
+}

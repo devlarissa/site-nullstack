@@ -1,0 +1,45 @@
+extends template
+
+block main
+    .total
+        .centeredBudgetCard
+            form.budgetCard.mail
+                h2.budgetFields Orçamento
+                div.budgetDivider
+                    .budgetFields
+                        label Nome:
+                        input(type='text' name='name' placeholder='Ex: Darth Vader').budgetInput
+                    .budgetFields
+                        label Email:
+                        input(type='email' name='email' placeholder='Ex: iamyourfather@mail.com').budgetInput
+                    .budgetFields
+                        label Plataformas:
+                        br
+                        input(type='checkbox' name='platformAndroid' value='true')
+                        label(for="checkbox").checkboxLabel Mobile Android
+                        br
+                        input(type='checkbox' name='platformIos' value='true')
+                        label(for="checkbox").checkboxLabel Mobile iOs
+                        br
+                        input(type='checkbox' name='platformWebService' value='true')
+                        label(for="checkbox").checkboxLabel Web service
+                        br
+                        input(type='checkbox' name='platformWeb' value='true')
+                        label(for="checkbox").checkboxLabel Web
+                        br
+                        input(type='checkbox' name='platformHardware' value='true')
+                        label(for="checkbox").checkboxLabel Hardware
+                        br
+                div.budgetDivider
+                    .budgetFields
+                        label Desenvolvimento da aplicação
+                        br
+                        select(name="developmentLevel")
+                            option(value="mvp") MVP (Mínimo Produto Viável)
+                            option(value="completo") Projeto completo   
+                    .budgetFields
+                        label Mensagem:
+                        textarea(name="details" rows="10" placeholder="Descreva o máximo de detalhes possivel sobre o seu projeto...").budgetComent
+                        button(type="submit" value="orcamento.pug").budgetButton Enviar
+
+

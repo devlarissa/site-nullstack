@@ -1,0 +1,740 @@
+$navHeight: 60px;
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+.titulo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 35px;
+  color: rgba(34, 15, 43, 0.788);
+  text-align: center;
+  //font-weight: bold
+}
+.subtitulo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: rgba(34, 15, 43, 0.849);
+  text-align: center;
+  margin-top: 0%;
+}
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.espacamentoSuperior {
+  margin-top: 65px;
+}
+.total {
+  padding-top: $navHeight;
+  > * {
+    height: calc(90vh - #{$navHeight});
+  }
+}
+.head {
+  padding: 10px 10px 10px 0px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: $navHeight;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 0.4px solid rgb(190, 190, 190);
+  background-color: rgba(255, 255, 255, 0.918);
+  z-index: 10;
+}
+.nav-right {
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  margin: 4px 0px;
+  a {
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: gray;
+    margin-right: 12px;
+  }
+  a:hover {
+    color: #5e144e;
+  }
+}
+.nav-left {
+  margin-left: 10px;
+}
+.fundo {
+  position: fixed;
+  background-image: linear-gradient(-25deg, #5e144e, #402ba2);
+  background-attachment: fixed;
+  margin-top: $navHeight;
+  opacity: 1;
+  z-index: -1;
+  > .home {
+    background-image: url(assets/notebook@800.webp);
+    @media all and (min-height: 800px), all and (min-width: 1067px) {
+      background-image: url(assets/notebook@1200.webp);
+    }
+    @media all and (min-height: 1200px), all and (min-width: 1600px) {
+      background-image: url(assets/notebook.webp);
+    }
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    &.center {
+      background-position: center center;
+    }
+    transition: background-position 1s ease-in-out;
+    filter: drop-shadow(2px 2px 5px white);
+  }
+}
+.cardTeamwork {
+  background-color: rgba(14, 14, 14, 0.925);
+  padding: 5px;
+  border-radius: 20px;
+  margin: 10px 50px;
+}
+.apresentacao {
+  background-color: rgba(255, 255, 255, 0.973);
+  text-align: center;
+  padding: 8px 20px 10px 20px;
+  margin-top: 20px;
+  width: 95%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.text-teamwork {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-family: 'Quicksand', sans-serif;
+}
+.infostartup {
+  margin-bottom: 0px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 0px;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+}
+.centeredCard {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.centeredBudgetCard {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footerStyle {
+  background-color: white;
+}
+.footerStyleSU {
+  padding-bottom: 40px;
+}
+.vazio {
+  flex-basis: 100%;
+}
+
+.icons {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 25px;
+  margin-bottom: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contactCard {
+  width: 40%;
+  padding: 10px 40px 30px 40px;
+  background-color: rgba(255, 255, 255, 0.801);
+  border-radius: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: rgba(72, 35, 77, 0.959);
+  text-align: left;
+}
+
+
+.iconsDesc {
+  width: 250px;
+  margin: 0px 10px;
+  text-align: center;
+  font-size: 14.5px;
+  font-weight: bold;
+  color: rgba(22, 22, 22, 0.699);
+  padding-bottom: 50px;
+  padding-top: 0px;
+}
+
+#navLanguage {
+  background-color: rgba(240, 240, 240, 0.87);
+  width: 100%;
+  padding: 20px 0px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.languageIcons {
+  vertical-align: 0%;
+  padding: 0px 35px;
+  opacity: 0.6;
+}
+
+.budgetCard {
+  width: 80%;
+  padding: 0px 0px 20px 25px;
+  background-color: rgba(255, 255, 255, 0.801);
+  border-radius: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  .checkboxLabel {
+    font-size: 16px;
+    margin-left: 5px;
+    vertical-align: 5%;
+  }
+  table {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+    padding: 6.5px 2px;
+    border-radius: 3px;
+    color: rgb(77, 77, 77);
+    font-size: 15px;
+    border-color: transparent;
+  }
+  font-weight: bold;
+  color: rgba(72, 35, 77, 0.959);
+  text-align: left;
+}
+.budgetFields {
+  margin: 15px 0px;
+  width: 95%;
+}
+
+.budgetDivider{
+  width: 50%;
+  float: left;
+}
+
+
+.budgetButton {
+  background-color: rgb(117, 39, 117);
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+  border-color: transparent;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  width: 100%;
+}
+
+.teamWorkDivider{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.teamWorkCard{
+  width: 300px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  float: left;
+  vertical-align: 0%;
+}
+
+
+.iconImageSU {
+  border-radius: 100px;
+  object-fit: cover;
+  width: 170px;
+  height: 170px;
+  vertical-align: 0%;
+}
+
+
+
+@media only screen and (min-width:1111px) and (max-width:1250px){// TABLET
+
+  .icons {
+    flex: 1;
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 25px;
+    margin-bottom: 50px;
+  }
+  .iconsDesc {
+    width: 240px;
+    margin: 0px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14.5px;
+    font-weight: bold;
+    color: rgba(22, 22, 22, 0.699);
+    padding-bottom: 30px;
+    padding-top: 0px;
+  }
+  .container {
+    vertical-align: 0%;
+    text-align: center;
+    height: 430px;
+    width: 22%;
+    padding: 1%;
+  }
+  .contactCard {
+    width: 90%;
+    padding: 10px 40px 30px 40px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(72, 35, 77, 0.959);
+    text-align: left;
+  }
+
+  #socialMediaText {
+    font-size: 100%;
+  }
+
+  .budgetCard {
+    width: 90%;
+    padding: 0px 10px 5px 10px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    .checkboxLabel {
+      font-size: 16px;
+      margin-left: 5px;
+      vertical-align: 5%;
+    }
+    select {
+      width: 100%;
+      padding: 6.5px 2px;
+      border-radius: 3px;
+      color: rgb(77, 77, 77);
+      font-size: 15px;
+      border-color: transparent;
+    }
+    font-weight: bold;
+    color: rgba(72, 35, 77, 0.959);
+    text-align: left;
+  }
+  .budgetFields {
+    margin: 10px 0px;
+    width: 100%;
+  }
+
+  .budgetDivider{
+    width: 100%;
+    float: none;
+  }
+
+  .budgetButton {
+    background-color: rgb(117, 39, 117);
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .teamWorkCard{
+    height: 338px;
+  }
+
+  .nav-right {
+    font-size: 27px;
+    padding-left: 20px;
+  }
+}
+
+.dropdown {
+  display: none;
+}
+
+@media only screen and (max-width:1110px){// MOBILE
+
+  .head{
+    padding: 10px;
+  }
+
+  .nav-right{
+    display: none;
+  }
+
+  .dropdown{
+    display: flex;
+    vertical-align: middle;
+  }
+
+  .icons {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 25px;
+    margin-bottom: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .container {
+    vertical-align: 0%;
+    text-align: center;
+    height: 430px;
+    width: 100%;
+    padding: 1%;
+  }
+  .iconsDesc {
+    width: 95%;
+    text-align: center;
+    font-size: 14.5px;
+    font-weight: bold;
+    color: rgba(22, 22, 22, 0.699);
+    padding: 1px 10px 20px 10px;
+  }
+  .subtitulo {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: rgba(34, 15, 43, 0.849);
+    text-align: center;
+    margin-top: 0%;
+    width: 100%;
+    padding: 0px 4px;
+  }
+
+  .contactCard {
+    width: 98%;
+    padding: 0px 7px 7px 7px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgba(72, 35, 77, 0.959);
+    text-align: left;
+    vertical-align: top;
+  }
+  #socialMediaText {
+    font-size: 77%;
+  }
+  #navLanguage {
+    background-color: rgba(240, 240, 240, 0.87);
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .languageIcons {
+    vertical-align: 0%;
+    padding: 10px 10px;
+    opacity: 0.6;
+  }
+
+  .total {
+    padding-top: $navHeight;
+    > * {
+      height: calc(100vh - #{$navHeight});
+    }
+  }
+
+
+  .centeredBudgetCard {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+  .budgetCard {
+    width: 98%;
+    padding: 0px 5px 5px 5px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(72, 35, 77, 0.959);
+    text-align: left;
+    vertical-align: middle;
+    .checkboxLabel {
+      font-size: 16px;
+      margin-left: 5px;
+      vertical-align: 5%;
+    }
+    select {
+      width: 100%;
+      padding: 6.5px 2px;
+      border-radius: 3px;
+      color: rgb(77, 77, 77);
+      font-size: 15px;
+      border-color: transparent;
+    }
+    font-weight: bold;
+    color: rgba(72, 35, 77, 0.959);
+    text-align: left;
+  }
+  .budgetFields {
+    margin: 5px 0px;
+    width: 100%;
+  }
+
+  .budgetDivider{
+    width: 100%;
+    float: none;
+  }
+
+  .budgetButton {
+    background-color: rgb(117, 39, 117);
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .teamWorkDivider{
+    display: contents;
+  }
+  
+  .teamWorkCard{
+    width: 50%;
+    height: 255px;
+    margin-bottom: 30px;
+  }
+
+  .iconImageSU {
+    border-radius: 100px;
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    vertical-align: 0%;
+  }
+
+  .apresentacao{
+    padding: 5px 5px 10px 5px;
+  }
+
+}
+
+.iconsText {
+  color: rgba(34, 34, 34, 0.945);
+  font-size: 116%
+}
+
+.iconImage {
+  transition: 1s ease;
+}
+.container {
+  vertical-align: 0%;
+  text-align: center;
+  height: 430px;
+  padding: 1%;
+}
+.container:hover .iconImage {
+  transform: rotate(20deg);
+}
+.footerDetails {
+    //background-color: rgb(34, 34, 34);
+    //background-color: rgb(104, 42, 104);
+  background-image: linear-gradient(to bottom right,rgb(57, 73, 121),rgb(129, 38, 73));
+  width: 100%;
+  padding: 1% 2% 2% 2%;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+.details {
+  font-size: 13px;
+  margin-bottom: -6px;
+
+  margin-top: 30px;
+}
+.logo-rodape {
+  align-items: center;
+}
+
+// Estilização da tela de Contato
+
+.contactFields {
+  margin: 15px 0px;
+  width: 100%;
+}
+.comentField {
+  resize: none;
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 5px;
+  border-top-left-radius: 2px;
+  border-color: transparent;
+}
+.inputField {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 5px;
+  border-top-left-radius: 2px;
+  border-color: transparent;
+}
+.buttonField {
+  background-color: rgb(117, 39, 117);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: transparent;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  width: 100%;
+}
+.contactContainer {
+  width: 20%;
+  text-align: center;
+}
+
+.contactImage{
+  width: 60%;
+  transition: 1s ease;
+}
+
+.contactContainer:hover .contactImage {
+  transform: rotate(-8deg);
+}
+#contactFooter {
+  background-color: white;
+}
+// Estilização da tela Portfólio
+#portfolioTable {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14.5px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.portfolioTd {
+  background-color: rgb(255, 255, 255);
+    //background-image: radial-gradient(rgb(129, 38, 73),rgb(57, 73, 121));
+  color: rgb(92, 57, 121);
+  padding: 5px 20px 15px 20px;
+  border-radius: 0%;
+  width: 350px;
+  text-align: justify;
+  font-weight: bold;
+  vertical-align: 0%;
+  margin-right: -10px;
+}
+#portfolioFooter {
+  background-color: white;
+}
+// Estilização da tela de orçamento
+
+.budgetComent {
+  resize: none;
+  width: 100%;
+  padding: 4px;
+  border-radius: 5px;
+  border-top-left-radius: 2px;
+  border-color: transparent;
+}
+.budgetInput {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 5px;
+  border-top-left-radius: 2px;
+  border-color: transparent;
+}
+
+.fa.fa-bars{
+    cursor: pointer;
+    font-size: 34px;
+    color: #48258b;
+    padding-top: 15%;
+}
+
+
+
+
+/* The container <div> - needed to position the dropdown content */
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 58px;
+  background-color: white;
+  font-family: 'Quicksand', sans-serif;
+  border-bottom-left-radius: 5px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #432898;
+  font-weight: bold;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
